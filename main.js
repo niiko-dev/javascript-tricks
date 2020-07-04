@@ -34,7 +34,7 @@ window.__proto__._VJS = {
                         } else {
                             
                             elm.forEach(that => {
-                                console.log(that)
+                                if (that === undefined) return;
                                 array.forEach(arr => {
                                     for (const item in arr) {
                                         
