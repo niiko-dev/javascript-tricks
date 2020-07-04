@@ -10,24 +10,50 @@ window.__proto__._VJS = {
                 },
 
                 'Animate': (elm, array, delay) => {
-                    var that = elm;
+                    if (elm.style) {
 
-                    array.forEach(arr => {
-                        for (const item in arr) {
-                            
-                            setTimeout(() => {
-                
-                                var value = arr[item];
-                                console.log(item, value);
+                        var that = elm;
 
-                                that.style[item] = value;
-                                that.style['transitionProperty'] = `${item}`;
-                                that.style['transitionDuration'] = `${delay / parseInt(array.indexOf(arr) + 1) / 1000}s`
-                
-                            }, delay / array.length * array.indexOf(arr) + 1)
-                
-                        }
-                    })
+                        array.forEach(arr => {
+                            for (const item in arr) {
+                                
+                                setTimeout(() => {
+                    
+                                    var value = arr[item];
+                                    console.log(item, value);
+    
+                                    that.style[item] = value;
+                                    that.style['transitionProperty'] = `${item}`;
+                                    that.style['transitionDuration'] = `${delay / parseInt(array.indexOf(arr) + 1) / 1000}s`
+                    
+                                }, delay / array.length * array.indexOf(arr) + 1)
+                    
+                            }
+                        })
+                    } else {
+                        
+                        var tha = elm;
+
+                        tha.forEach(that => {
+                            array.forEach(arr => {
+                                for (const item in arr) {
+                                    
+                                    setTimeout(() => {
+                        
+                                        var value = arr[item];
+                                        console.log(item, value);
+    
+                                        that.style[item] = value;
+                                        that.style['transitionProperty'] = `${item}`;
+                                        that.style['transitionDuration'] = `${delay / parseInt(array.indexOf(arr) + 1) / 1000}s`
+                        
+                                    }, delay / array.length * array.indexOf(arr) + 1)
+                        
+                                }
+                            })
+                        })
+                    }
+
                 },
 
                 'JSON': {
