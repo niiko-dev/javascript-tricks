@@ -6,7 +6,7 @@ VJS is a series of Javascript plugins..
 | :---:   | :-: |
 | [Installation](#Installation) | How to install **VJS** |
 | [Requiring](#Requiring) | **Require** it in a variable |
-| [Plugins](#request)| All **plugins** |
+| [Plugins](#Plugins)| All **plugins** |
 
 ## Installation
 
