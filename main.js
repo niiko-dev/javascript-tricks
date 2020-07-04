@@ -11,29 +11,7 @@ window.__proto__._VJS = {
                     },
     
                     'Animate': (elm, array, delay) => {
-                        if (elm.length === undefined || 1) {
-    
-                            console.log("oine element")
-
-                            var that = elm;
-    
-                            array.forEach(arr => {
-                                for (const item in arr) {
-                                    
-                                    setTimeout(() => {
-                        
-                                        var value = arr[item];
-                                        console.log(item, value);
-        
-                                        that.style[item] = value;
-                                        that.style['transitionProperty'] = `${item}`;
-                                        that.style['transitionDuration'] = `${delay / parseInt(array.indexOf(arr) + 1) / 1000}s`
-                        
-                                    }, delay / array.length * array.indexOf(arr) + 1)
-                        
-                                }
-                            })
-                        } else {
+                        if (elm.length < 1) {
                             
                             console.log("array")
 
@@ -54,6 +32,28 @@ window.__proto__._VJS = {
                             
                                     }
                                 })
+                            })
+                        } else {
+
+                            console.log("oine element")
+
+                            var that = elm;
+    
+                            array.forEach(arr => {
+                                for (const item in arr) {
+                                    
+                                    setTimeout(() => {
+                        
+                                        var value = arr[item];
+                                        console.log(item, value);
+        
+                                        that.style[item] = value;
+                                        that.style['transitionProperty'] = `${item}`;
+                                        that.style['transitionDuration'] = `${delay / parseInt(array.indexOf(arr) + 1) / 1000}s`
+                        
+                                    }, delay / array.length * array.indexOf(arr) + 1)
+                        
+                                }
                             })
                         }
     
