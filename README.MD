@@ -17,7 +17,7 @@ Import the javascript file called **main.js** to your website.
 When imported to your website always call this function to require it.
 
 ```javascript
-const VJS = VJS.Require([window, document])
+window._VJS.Require([window, document])
 ```
 
 ## Plugins
