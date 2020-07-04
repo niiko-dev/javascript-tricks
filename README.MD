@@ -1,29 +1,48 @@
-# Foobar
+# VJS
 
-Foobar is a Python library for dealing with word pluralization.
+VJS is a series of Javascript plugins..
+
+| Subject | Description  |
+| :---:   | :-: |
+| [Installation](#Installation) | How to install **VJS** |
+| [Requiring](#Requiring) | **Require** it in a variable |
+| [Plugins](#request)| All **plugins** |
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Import the javascript file called **main.js** to your website.
 
-```bash
-pip install foobar
+## Requiring
+
+When imported to your website always call this function to require it.
+
+```javascript
+const VJS = VJS.Require([window, document])
 ```
 
-## Usage
+## Plugins
+| Plugin | Description  |
+| :---:   | :-: |
+| [Animate](#Animate) | Animate **elements** |
+| [JSON](#JSON) | Store **JSON** in elements |
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+### Animate
+```javascript
+VJS.Animate(
+    document.getElementById('niiko'),      // element to animate
+    [{'color': 'red'}, {'color': 'blue'}], // styles to be animated
+    2500                                   // duration
+);
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### JSON
+```javascript
+VJS.JSON.set(
+    document.getElementById('niiko'),      // element to store json in
+    {'name': 'niiko', 'skills': ['js']},   // json data
+);
 
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+VJS.JSON.get(
+    document.getElementById('niiko')       // element that has json in it
+);
+```
