@@ -11,7 +11,7 @@ window.__proto__._VJS = {
                     },
     
                     'Animate': (elm, array, delay) => {
-                        if (elm.style) {
+                        if (elm.style != undefined) {
     
                             var that = elm;
     
@@ -36,6 +36,7 @@ window.__proto__._VJS = {
                             var tha = elm;
     
                             tha.forEach(that => {
+                                console.log(that)
                                 array.forEach(arr => {
                                     for (const item in arr) {
                                         
