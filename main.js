@@ -12,10 +12,9 @@ window.__proto__._VJS = {
     
                     'Animate': (elm, array, delay) => {
                         if (elm.length < 1) {
-                            
-                            console.log("array")
-
+                    
                             elm.forEach(that => {
+                                console.log(that)
                                 if (that === undefined) return;
                                 array.forEach(arr => {
                                     for (const item in arr) {
@@ -35,7 +34,7 @@ window.__proto__._VJS = {
                             })
                         } else {
 
-                            console.log("oine element")
+                            console.log(elm)
 
                             var that = elm;
     
