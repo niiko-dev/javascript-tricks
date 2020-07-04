@@ -33,9 +33,7 @@ window.__proto__._VJS = {
                             })
                         } else {
                             
-                            var tha = elm;
-    
-                            tha.forEach(that => {
+                            elm.forEach(that => {
                                 console.log(that)
                                 array.forEach(arr => {
                                     for (const item in arr) {
