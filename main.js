@@ -41,7 +41,6 @@ window.__proto__._VJS = {
                                         setTimeout(() => {
                             
                                             var value = arr[item];
-                                            console.log(item, value);
         
                                             that.style[item] = value;
                                             that.style['transitionProperty'] = `${item}`;
