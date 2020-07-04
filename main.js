@@ -11,7 +11,7 @@ window.__proto__._VJS = {
                     },
     
                     'Animate': (elm, array, delay) => {
-                        if (elm.style != undefined) {
+                        if (elm.length === undefined || 1) {
     
                             var that = elm;
     
