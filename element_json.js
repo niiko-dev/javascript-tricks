@@ -2,9 +2,9 @@ Element.prototype.JSON = function () {
     var that = this;
 
     var config = {
-        splitChar: "﹒",
-        attribute: "json",
-        encryption: 7
+        splitChar: "﹒", // salt
+        attribute: "json", // attribute name
+        encryption: 1 // multiplier
     }
 
     return {
@@ -31,4 +31,12 @@ Element.prototype.JSON = function () {
         }
     }
 }
-a
+
+/*
+
+Usage:
+    element.JSON().set({ name: "Niiko" }) // 123﹒34﹒110﹒97﹒109﹒101﹒34﹒58﹒34﹒78﹒105﹒105﹒107﹒111﹒34﹒125
+    
+    element.JSON().get() // { name: "Niiko" }
+
+*/
