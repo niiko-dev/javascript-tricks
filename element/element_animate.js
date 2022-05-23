@@ -20,8 +20,10 @@ Element.prototype.Animate = function (array, delay) {
 } 
 
 /*
+
 Usage:
     element.Animate(
         [{ "color": "green" }, { "color": "red" }, { "margin": "50px" }, { "margin": "0px" }]
     , 1800)
+    
 */
